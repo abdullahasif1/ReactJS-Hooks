@@ -1,10 +1,11 @@
 import './App.css';
+import React from 'react';
+import HookCounter from './Components/HookCounter';
 
 function App() {
   return (
     <div className="App">
-      
-      <button className='btn btn-primary'> Helooooo</button>
+      <HookCounter/>
     </div>
   );
 }
