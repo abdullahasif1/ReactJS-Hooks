@@ -7,11 +7,16 @@ import UseEffectOne from './Components/UseEffectOne';
 import HookMouse from './Components/HookMouse';
 import MouseContainer from './Components/MouseContainer';
 import IntervalGookCounter from './Components/IntervalGookCounter';
+import DataFetching from './Components/DataFetching';
 
 function App() {
   return (
     <div className="App">
-      <IntervalGookCounter/>
+
+      <DataFetching/>
+
+
+      {/* <IntervalGookCounter/> */}
       {/* <MouseContainer/> */}
       {/* <HookMouse/> */}
       {/* <UseEffectOne/> */}
