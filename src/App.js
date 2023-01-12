@@ -5,11 +5,13 @@ import HookCounter from './Components/HookCounter';
 import HookCounterTwo from './Components/HookCounterTwo';
 import UseEffectOne from './Components/UseEffectOne';
 import HookMouse from './Components/HookMouse';
+import MouseContainer from './Components/MouseContainer';
 
 function App() {
   return (
     <div className="App">
-      <HookMouse/>
+      <MouseContainer/>
+      {/* <HookMouse/> */}
       {/* <UseEffectOne/> */}
 
 
