@@ -10,6 +10,7 @@ import IntervalGookCounter from './Components/IntervalGookCounter';
 import DataFetching from './Components/DataFetching';
 import ComponentC from './Components/ComponentC';
 import Counter from './Components/Counter';
+import CounterTwo from './Components/CounterTwo';
 
 export const UserContext = React.createContext()
 export const CompanyContext = React.createContext()
@@ -19,8 +20,8 @@ export const CompanyContext = React.createContext()
 function App() {
   return (
     <div className="App">
-
-      <Counter/>
+      <CounterTwo/>
+      {/* <Counter/> */}
 
 
       {/* <UserContext.Provider value='Abdullah'>
