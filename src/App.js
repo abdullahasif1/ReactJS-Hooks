@@ -9,6 +9,7 @@ import MouseContainer from './Components/MouseContainer';
 import IntervalGookCounter from './Components/IntervalGookCounter';
 import DataFetching from './Components/DataFetching';
 import ComponentC from './Components/ComponentC';
+import Counter from './Components/Counter';
 
 export const UserContext = React.createContext()
 export const CompanyContext = React.createContext()
@@ -18,11 +19,15 @@ export const CompanyContext = React.createContext()
 function App() {
   return (
     <div className="App">
-      <UserContext.Provider value='Abdullah'>
+
+      <Counter/>
+
+
+      {/* <UserContext.Provider value='Abdullah'>
         <CompanyContext.Provider value='PosterMyWall'>
           <ComponentC/>
         </CompanyContext.Provider>
-      </UserContext.Provider>
+      </UserContext.Provider> */}
 
 
       {/* <DataFetching/> */}
