@@ -11,6 +11,7 @@ import DataFetching from './Components/DataFetching';
 import ComponentC from './Components/ComponentC';
 import Counter from './Components/Counter';
 import CounterTwo from './Components/CounterTwo';
+import CounterThree from './Components/CounterThree';
 
 export const UserContext = React.createContext()
 export const CompanyContext = React.createContext()
@@ -20,7 +21,8 @@ export const CompanyContext = React.createContext()
 function App() {
   return (
     <div className="App">
-      <CounterTwo/>
+      <CounterThree/>
+      {/* <CounterTwo/> */}
       {/* <Counter/> */}
 
 
