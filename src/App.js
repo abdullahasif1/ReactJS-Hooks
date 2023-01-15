@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useReducer } from 'react';
 import './App.css';
 import HookCounterThree from './Components/HookCounterThree';
 import HookCounter from './Components/HookCounter';
@@ -12,24 +12,52 @@ import ComponentC from './Components/ComponentC';
 import Counter from './Components/Counter';
 import CounterTwo from './Components/CounterTwo';
 import CounterThree from './Components/CounterThree';
+import ComponentAA from './Components/ComponentAA';
+import ComponentBB from './Components/ComponentBB';
+import ComponentCC from './Components/ComponentCC';
 
 export const UserContext = React.createContext()
 export const CompanyContext = React.createContext()
 
+//using the useReducer hooks with the useContext Hook to share the state in nested components
+export const CountContext = React.createContext()
 
+    const initialState = 0;
+    const reducer = (state, action) =>{
+        switch (action) {
+            case 'increament':
+                return state + 1;
+            case 'decreament':
+                return state - 1;
+            case 'reset':
+                return initialState;
+            default:
+                return state;
+        }
+    }
 
 function App() {
+  const [count, dispatch] = useReducer(reducer, initialState)
   return (
     <div className="App">
-      <CounterThree/>
+      <CountContext.Provider value={{ countState: count, countDispatch: dispatch }}>
+        <h1>Counter : {count}</h1>
+        <ComponentAA/>
+        <ComponentBB/>
+        <ComponentCC/>
+      </CountContext.Provider>
+
+
+            
+      {/* <CounterThree/> */}
       {/* <CounterTwo/> */}
       {/* <Counter/> */}
 
 
       {/* <UserContext.Provider value='Abdullah'>
-        <CompanyContext.Provider value='PosterMyWall'>
-          <ComponentC/>
-        </CompanyContext.Provider>
+      <CompanyContext.Provider value='PosterMyWall'>
+      <ComponentC/>
+      </CompanyContext.Provider>
       </UserContext.Provider> */}
 
 
@@ -45,8 +73,10 @@ function App() {
       {/* <HookCounterThree/> */}
       {/* <HookCounter/> */}
       {/* <HookCounterTwo/> */}
-    </div>
-  );
-}
 
+
+</div>
+
+);
+}
 export default App;
